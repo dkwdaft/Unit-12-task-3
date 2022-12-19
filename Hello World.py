@@ -8,4 +8,4 @@ label = Text(app, text="What's your name?")
 name = TextBox(app)
 button = PushButton(app, command=update_text)
 
-app.display(
+app.display()
