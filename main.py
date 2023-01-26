@@ -1,4 +1,4 @@
-from guizero import *
+from guizero import App
+app = App(title="")
 
-app = App(title="test")
 app.display()
