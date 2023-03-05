@@ -2,8 +2,8 @@ from guizero import App, Box, Text, Combo, TextBox
 
 options = ["Choose", "£(GBP)", "$(USD)"]
 border_width = 1
-# create new App object , this will manage the main user interface screen
-app = App(title=" Currency Converter")
+# create new App object , this will manage the  user interface
+app = App(title="Currency Converter")
 # Create main box for containing layout constraints
 master_box = Box(app)
 # Create parent box object for containing all objects relating to entering the starting currency
