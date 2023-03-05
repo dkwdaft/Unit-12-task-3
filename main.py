@@ -2,7 +2,7 @@ from guizero import App, Box, Text, Combo, TextBox
 
 options = ["Choose", "£(GBP)", "$(USD)"]
 border_width = 1
-# create new App object , this will manage the user interface
+# Create new App object,this will manage the user interface
 app = App(title="Currency Converter")
 # Create main box for containing layout constraints
 master_box = Box(app, layout="grid")
