@@ -31,8 +31,8 @@ exchange_rate_label = Text(exchange_rate_box, text="Exchange Rate:")
 # Create text entry box for entering the starting amount
 exchange_rate_text_entry_box = TextBox(exchange_rate_box, text="0.00")
 # Create box for holding the results label
-# results_box = Box(master_box, grid=[1,2])
+results_box = Box(master_box, grid=[1, 2])
 # Create text label for displaying the results of the calculation
-# results_text = Text(results_box, text="Results will be displayed here")
+results_text = Text(results_box, text="Results will be displayed here")
 # Finally display the app screen
 app.display()
