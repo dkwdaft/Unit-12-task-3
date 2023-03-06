@@ -1,5 +1,30 @@
 from guizero import App, Box, Text, Combo, TextBox
 
+password = "1234"
+
+
+def password_check():
+
+    app.disable()
+    # Ask, user for the password
+    enter_password = app.question("Enter password",
+                                  "Please enter the password to gain access the Currency Converter system")
+    if enter_password is not None:
+        if password == enter_password:
+            print("Correct?")
+            app.enable()
+            print("Enable")
+            app.display()
+
+
+        else:
+            app.error("Incorrect password", "You have entered the incorrect password please try again!")
+            password_check()
+    else:
+        if app.yesno("Quit?", "Do you want to quit?"):
+            app.destroy()
+
+
 options = ["Choose", "£(GBP)", "$(USD)"]
 border_width = 1
 # Create new App object,this will manage the user interface
@@ -34,5 +59,6 @@ exchange_rate_text_entry_box = TextBox(exchange_rate_box, text="0.00")
 results_box = Box(master_box, grid=[1, 2])
 # Create text label for displaying the results of the calculation
 results_text = Text(results_box, text="Results will be displayed here")
-# Finally display the app screen
-app.display()
+password_check()
+
+
