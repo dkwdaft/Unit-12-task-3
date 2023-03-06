@@ -8,4 +8,6 @@
 /.idea/workspace.xml
 .DS_Store
 /.idea/
-Notes/validation.py
+
+/design docs/
+Logic testing before implementation/validation.py
