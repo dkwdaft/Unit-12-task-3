@@ -4,18 +4,17 @@ password = "1234"
 
 
 def password_check():
-
     app.disable()
     # Ask, user for the password
     enter_password = app.question("Enter password",
                                   "Please enter the password to gain access the Currency Converter system")
+    # Check a password has been entered, Otherwise,  ask the user whether they want The application to quit
     if enter_password is not None:
+        # Check the password matches the correct password  call  this function  again, an
         if password == enter_password:
-            print("Correct?")
+            print("Correct")
             app.enable()
-            print("Enable")
             app.display()
-
 
         else:
             app.error("Incorrect password", "You have entered the incorrect password please try again!")
@@ -59,6 +58,5 @@ exchange_rate_text_entry_box = TextBox(exchange_rate_box, text="0.00")
 results_box = Box(master_box, grid=[1, 2])
 # Create text label for displaying the results of the calculation
 results_text = Text(results_box, text="Results will be displayed here")
+# call the function to check the password
 password_check()
-
-
