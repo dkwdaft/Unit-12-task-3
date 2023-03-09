@@ -22,7 +22,9 @@ def password_check():
     else:
         if app.yesno("Quit?", "Do you want to quit?"):
             app.destroy()
+    def starting_amount_updated():
 
+    def exchange_rate_updated():
 
 options = ["Choose", "£(GBP)", "$(USD)"]
 border_width = 1
@@ -41,7 +43,7 @@ starting_amount_box = Box(master_box, grid=[1, 0])
 # Create label for the starting amount text entry box
 starting_amount_label = Text(starting_amount_box, text="Starting Amount:")
 # Create text entry box for entering the starting amount
-starting_amount_text_entry_box = TextBox(starting_amount_box, text="0.00")
+starting_amount_text_entry_box = TextBox(starting_amount_box, text="0.00",command=starting_amount_updated)
 # Create parent box object for containing all objects relating to entering the desired currency
 desired_currency_box = Box(master_box, grid=[2, 0])
 # Create label for the desired currency, drop-down box
@@ -53,7 +55,7 @@ exchange_rate_box = Box(master_box, grid=[1, 1])
 # Create label for the starting amount text entry box
 exchange_rate_label = Text(exchange_rate_box, text="Exchange Rate:")
 # Create text entry box for entering the starting amount
-exchange_rate_text_entry_box = TextBox(exchange_rate_box, text="0.00")
+exchange_rate_text_entry_box = TextBox(exchange_rate_box, text="0.00", command=exchange_rate_updated)
 # Create box for holding the results label
 results_box = Box(master_box, grid=[1, 2])
 # Create text label for displaying the results of the calculation
