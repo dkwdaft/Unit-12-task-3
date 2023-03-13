@@ -1,4 +1,4 @@
-from guizero import App, Box, Text, Combo, TextBox
+from guizero import App, Box, Text, Combo, TextBox, PushButton
 
 password = "1234"
 
@@ -54,8 +54,12 @@ exchange_rate_box = Box(master_box, grid=[1, 1])
 exchange_rate_label = Text(exchange_rate_box, text="Exchange Rate:")
 # Create text entry box for entering the starting amount
 exchange_rate_text_entry_box = TextBox(exchange_rate_box, text="0.00")
+# Create box for holding the convert button
+convert_button_box = Box(master_box, grid=[1, 2])
+# Create convert button
+convert_button = PushButton(convert_button_box, text='Convert')
 # Create box for holding the results label
-results_box = Box(master_box, grid=[1, 2])
+results_box = Box(master_box, grid=[1, 3])
 # Create text label for displaying the results of the calculation
 results_text = Text(results_box, text="Results will be displayed here")
 # call the function to check the password
